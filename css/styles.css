@@ -1,0 +1,76 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1200px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+
+.animation {
+    animation: jump;
+    animation-duration: 500ms;
+}
+
+.person {
+    height: 50px;
+    width: 20px;
+    background-color: blue;
+    position: relative;
+    top: 450px;
+    left: 100px;
+    animation-timing-function: ease-out;
+}
+
+    @keyframes jump {
+        0% {top: 450px;}
+        30% {top: 200px;}
+        70% {top: 200px;}
+        100% {top: 450px;}
+
+    }
+
+.enemy {
+    height: 100px;
+    width: 20px;
+    background-color: black;
+    position: relative;
+    left: 1160px;
+    top: 350px;
+    animation: run;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+    @keyframes run {
+        0% {left: 1100px;}
+        100% {left: 0px;}
+    }
+
+.score {
+    float: left;
+    color: red;
+}
+
+.message {
+    position: absolute;
+    position: absolute;
+    bottom: 70%;
+    left: 50%; 
+
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    text-align: center;
+    top: 200px;
+}
+button {
+    padding: 5px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
